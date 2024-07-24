@@ -40,11 +40,11 @@ stages:
         appSettings: |
           [
             {
-              "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
-              "value": "true"
-            },
+              "name": "WEBSITE_RUN_FROM_PACKAGE",
+              "value": "1"
+            },            
             {
-              "name": "WEBSITE_WEBDEPLOY_USE_SCM",
+              "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
               "value": "true"
             }
           ]
