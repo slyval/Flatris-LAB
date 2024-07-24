@@ -80,6 +80,6 @@ stages:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
               appName: $(webAppName)
-              runtimeStack: 'NODE|20-lts'
+              runtimeStack: 'NODE|10.14'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
  
