@@ -12,13 +12,13 @@ variables:
   azureSubscription: 'sh-test-svc'
   
   # Web app name
-  webAppName: 'sh-testapp'
+  webAppName: 'hs-testapp'
   
   # Resource group
   resourceGroupName: 'test-RG'
  
   # Environment name
-  environmentName: 'sh-testapp'
+  environmentName: 'hs-testapp'
  
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
