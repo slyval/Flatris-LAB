@@ -77,7 +77,6 @@ stages:
           - script: |
               echo "Installing @babel/node globally..."
               npm install -g @babel/node
-              displayName: 'Install @babel/node Globally' 
                       
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: Matt-Test-NodeJS-Deploy'
