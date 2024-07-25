@@ -91,12 +91,6 @@ stages:
       runOnce:
         deploy:
           steps:   
-          - script: |
-              echo "Installing @babel/node and @babel/cli globally..."
-              npm install -g @babel/cli @babel/node
-          - script: |
-              echo "Installing yarn globally..."
-              npm install --global yarn
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: Matt-Test-NodeJS-Deploy'
             inputs:
