@@ -60,11 +60,11 @@ stages:
       displayName: 'Install Dependencies'
       inputs:
         command: 'install'
-    - task: Npm@1
-      displayName: 'Build Application'
-      inputs:
-        command: 'custom'
-        customCommand: 'run build'         
+#    - task: Npm@1
+#      displayName: 'Build Application'
+#      inputs:
+#        command: 'custom'
+#        customCommand: 'run build'         
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
