@@ -47,7 +47,24 @@ stages:
               "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
               "value": "true"
             }
-          ]   
+          ]
+    - task: CmdLine@2
+      displayName: 'Installing @babel/node and @babel/cli globally...'
+      inputs:
+        script: 'npm install -g @babel/cli @babel/node'
+    - task: CmdLine@2
+      displayName: 'Installing yarn globally...'
+      inputs:
+        script: 'npm install --global yarn '
+    - task: Npm@1
+      displayName: 'Install Dependencies'
+      inputs:
+        command: 'install'
+    - task: Npm@1
+      displayName: 'Build Application'
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'         
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -77,7 +94,9 @@ stages:
           - script: |
               echo "Installing @babel/node and @babel/cli globally..."
               npm install -g @babel/cli @babel/node
-                      
+          - script: |
+              echo "Installing yarn globally..."
+              npm install --global yarn
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: Matt-Test-NodeJS-Deploy'
             inputs:
